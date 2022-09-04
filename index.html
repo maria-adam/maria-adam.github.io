@@ -4,28 +4,14 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     </head>
     <body>
+        <script src="src/countdown.js"></script>
+        <div id="countdown"></div>
         <script>
-            const todayPrecised = new Date()
-            const today = new Date(
-                todayPrecised.getFullYear(), 
-                todayPrecised.getMonth(), 
-                todayPrecised.getDate(), 
-                0, 0, 0, 0
-            );
-            // year, month, day, hours, minutes, seconds, milliseconds
-            const target = new Date(2023, 8, 30, 0, 0, 0, 0);
-            const diff = target.getTime() - today.getTime();
-            const days = diff / (86400000)
-            if (days > 0) {
-                document.write('Pozostało ' + days + ' dni')
-            }
-            else if (days === 0) {
-                document.write('To już dziś !!!')
-            }
-            else if (days < 0) {
-                const daysAfterEvent = -1 * days
-                document.write('Odbyło się ' + daysAfterEvent + ' dni temu')
-            }
+
+            const intervalId = window.setInterval(function(){
+                document.getElementById('countdown').innerHTML = make_countdown_message()
+            }, 1000);
+            //clearInterval(intervalId) 
         </script>
     </body>
 </html>

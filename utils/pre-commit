@@ -1,0 +1,7 @@
+#!/bin/sh
+# add this file to .git/hooks/pre-commit
+TIMESTAMP=`date +%Y-%m-%d_%H-%M-%S`
+echo "const lastUpdate='$TIMESTAMP';" > src/version.js
+git add src/version.js
+echo "Updated the time in src/version.js"
+exit 0

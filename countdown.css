@@ -1,0 +1,10 @@
+.countdown-area {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.countdown-item {
+    background-color: blue;
+}

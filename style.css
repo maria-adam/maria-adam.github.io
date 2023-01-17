@@ -1,0 +1,22 @@
+.title {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.menu-item {
+    /* flex-wrap: column wrap; */
+    /* justify-content: space-around; */
+}
+
+.page {
+    background-image: url('images/theme.jpg');
+}
